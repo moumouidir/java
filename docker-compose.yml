@@ -1,0 +1,38 @@
+
+services:
+  livres-db:
+    image: postgres:15
+    container_name: livres-db
+    environment:
+      POSTGRES_DB: livredb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5434:5432"
+    volumes:
+      - livre-data:/var/lib/postgresql/data
+    networks:
+      - library-networks
+
+  achat-db:
+    image: postgres:15
+    container_name: achat-db
+    environment:
+        POSTGRES_DB: achat-db
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+    ports:
+        - "5433:5432"
+    volumes:
+        - achat-data:/var/lib/postgresql/data
+    networks:
+        - library-networks
+
+
+volumes:
+  livre-data:
+  achat-data:
+
+networks:
+  library-networks:
+    driver: bridge
