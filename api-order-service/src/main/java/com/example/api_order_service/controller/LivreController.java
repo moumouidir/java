@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/livres")
+@RequestMapping("/order/livres")
 public class LivreController {
 
     @Autowired

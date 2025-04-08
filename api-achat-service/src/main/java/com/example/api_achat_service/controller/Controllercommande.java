@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/commande")
+@RequestMapping("achat/commande")
 public class Controllercommande {
     private final serviceCommande serviceCommande;
 

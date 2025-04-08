@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/autheurs")
+@RequestMapping("/order/auteurs")
 public class AuteurController {
 
     @Autowired

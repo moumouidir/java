@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/client")
+@RequestMapping("/achat/client")
 public class controllerclient {
     private final serviceClient serviceClient;
 
